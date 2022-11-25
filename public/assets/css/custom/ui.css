@@ -1,0 +1,252 @@
+/* =================== base =================== */
+html,
+body,
+div,
+ol,
+ul,
+dl,
+[class] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.15;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  font-family: "nanum", sans-serif;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+/* =================== fonts =================== */
+/* ---------- nanum square ---------- */
+@font-face {
+  font-family: "nanum";
+  font-weight: 800;
+  src: url("../../fonts/nanumsquare/NanumSquare_acEB.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acEB.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acEB.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acEB.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "nanum";
+  font-weight: 600;
+  src: url("../../fonts/nanumsquare/NanumSquare_acB.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acB.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acB.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acB.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "nanum";
+  font-weight: 400;
+  src: url("../../fonts/nanumsquare/NanumSquare_acR.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acR.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acR.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acR.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "nanum";
+  font-weight: 300;
+  src: url("../../fonts/nanumsquare/NanumSquare_acL.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acL.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acL.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acL.otf") format("opentype");
+  font-display: swap;
+}
+/* =================== helper =================== */
+.none {
+  display: none;
+}
+
+/* =================== button =================== */
+.btns-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.btns-wrap .btn {
+  margin: 10px 0;
+  margin-left: 10px;
+}
+.btns-wrap .btn:first-of-type {
+  margin-left: 0px;
+}
+
+.btns-wrap-double {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.btns-wrap-double .btn {
+  width: 50%;
+}
+
+.btns-wrap-fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  z-index: 20;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.btns-wrap-fixed .btn {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.btn:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.btn-round {
+  border-radius: 30px;
+}
+
+.btn-rounded {
+  border-radius: 8px;
+}
+
+.btn-shadow {
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* =================== form =================== */
+.input-wrap {
+  width: 100%;
+}
+
+.input {
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 17px;
+  border-radius: 6px;
+  background-color: white;
+  font-size: em(18);
+  border: 1px solid;
+}
+.input:hover, .input:focus {
+  border-color: lightblue;
+}
+.input::-webkit-input-placeholder {
+  opacity: 0.7;
+}
+.input::-moz-placeholder {
+  opacity: 0.7;
+}
+.input:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.input::-ms-input-placeholder {
+  opacity: 0.7;
+}
+.input::placeholder {
+  opacity: 0.7;
+}
+.input.input-tarea {
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 6px;
+  resize: none;
+}
+.input.input-round {
+  border: 1px solid;
+  border-radius: 25px;
+}
+.input.input-underbar {
+  border-bottom: 1px solid;
+}
+
+/* =================== layout =================== */
+#app {
+  min-height: 100%;
+}
+
+#page {
+  min-height: 100%;
+}
+
+.l-center {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.flex-btw-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* =================== main =================== */

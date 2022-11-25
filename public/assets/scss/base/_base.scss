@@ -1,0 +1,38 @@
+/* =================== base =================== */
+html,
+body,
+div,
+ol,
+ul,
+dl,
+[class] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.15;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  font-family: "nanum", sans-serif;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+select {
+  padding: 5px 10px;
+}
