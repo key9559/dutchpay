@@ -1,8 +1,7 @@
 /* =================== button =================== */
 // .btn-wrap .btn-fixed-wrap btn-double-wrap ...
 .btns-wrap {
-  @include flex {
-    align-items: center;
+  @include flex-center {
     flex-wrap: wrap;
   }
 
@@ -16,54 +15,20 @@
   }
 }
 
-.btns-wrap-double {
-  @include flex {
-    align-items: center;
-  }
-
-  .btn {
-    width: 50%;
-  }
-}
-
-.btns-wrap-fixed {
-  @include flex-center {
-    gap: 10px;
-  }
-
-  z-index: z(fixed);
-  position: fixed;
-  top: auto;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-
-  .btn {
-    @include full;
-  }
-}
-
 .btn {
   @include input-reset;
   @include flex-center(inline-flex);
 
+  min-width: 200px;
+  height: 50px;
+  border: 2px solid color(main);
+  background-color: color(main);
+  color: white;
   cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.07);
 
   &:disabled {
     background-color: gray;
     cursor: default;
   }
-}
-
-// button style
-.btn-round {
-  border-radius: 30px;
-}
-
-.btn-rounded {
-  border-radius: 8px;
-}
-
-.btn-shadow {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.07);
 }
